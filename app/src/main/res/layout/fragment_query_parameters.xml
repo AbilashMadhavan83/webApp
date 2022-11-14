@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.webapp.ui.retrofit.shared.viewModel.SharedViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.retrofit.queryParameters.QueryParametersFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_Comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="40dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="Comments"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_postId"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="Post ID"
+                    android:layout_margin="10dp">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <Spinner
+                    android:id="@+id/spinner_postId"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="ID"
+                    android:layout_margin="10dp">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <Spinner
+                    android:id="@+id/spinner_Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_marginRight="10dp"
+                        android:text="Cancel">
+
+                    </com.google.android.material.button.MaterialButton>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Search">
+
+                    </com.google.android.material.button.MaterialButton>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/list_item" />
+
+    </LinearLayout>
+
+</layout>

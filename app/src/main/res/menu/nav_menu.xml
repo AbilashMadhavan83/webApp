@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"
+        app:showAsAction = "ifRoom"/>
+
+    <item android:id="@+id/nav_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite"
+        app:showAsAction = "ifRoom"/>
+
+    <item android:id="@+id/menu_PathParameters"
+        android:title="Path Parameters"
+        app:showAsAction = "never"/>
+
+    <item android:id="@+id/menu_Query_parameters"
+        android:title="Query Parameters"
+        app:showAsAction = "never"/>
+
+    <item android:id="@+id/menu_Query_Map"
+        android:title="Query Map"
+        app:showAsAction = "never"/>
+
+    <item android:id="@+id/menu_Load_image_using_Glide"
+        android:title="Load image using Glide"
+        app:showAsAction = "never"/>
+
+    <item android:id="@+id/menu_Load_crud_operation"
+        android:title="CRUD Operation"
+        app:showAsAction = "never"/>
+
+
+
+</menu>

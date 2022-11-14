@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Web App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit">Exit</string>
+    <string name="back">Back</string>
+    <string name="_continue">Continue</string>
+    <string name="try_again">Try again!</string>
+
+</resources>

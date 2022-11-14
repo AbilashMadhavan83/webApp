@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/retrieveDataFragment">
+
+    <fragment
+        android:id="@+id/retrieveDataFragment"
+        android:name="com.example.webapp.ui.retrofit.retrieveData.RetrieveDataFragment"
+        android:label="Retrieve data"
+        tools:layout="@layout/fragment_retrieve_data" >
+        <action
+            android:id="@+id/action_retrieveDataFragment_to_queryParametersFragment"
+            app:destination="@id/queryParametersFragment" />
+        <action
+            android:id="@+id/action_retrieveDataFragment_to_queryMapFragment"
+            app:destination="@id/queryMapFragment" />
+        <action
+            android:id="@+id/action_retrieveDataFragment_to_pathParametersFragment"
+            app:destination="@id/pathParametersFragment" />
+        <action
+            android:id="@+id/action_retrieveDataFragment_to_bothParametersFragment"
+            app:destination="@id/bothParametersFragment" />
+        <action
+            android:id="@+id/action_retrieveDataFragment_to_loadImageUsingGlideFragment"
+            app:destination="@id/loadImageUsingGlideFragment" />
+        <action
+            android:id="@+id/action_retrieveDataFragment_to_CRUDOperationFragment"
+            app:destination="@id/CRUDOperationFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/queryParametersFragment"
+        android:name="com.example.webapp.ui.retrofit.queryParameters.QueryParametersFragment"
+        android:label="fragment_query_parameters"
+        tools:layout="@layout/fragment_query_parameters" >
+        <action
+            android:id="@+id/action_queryParametersFragment_to_retrieveDataFragment"
+            app:destination="@id/retrieveDataFragment"
+            app:popUpTo="@id/retrieveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/queryMapFragment"
+        android:name="com.example.webapp.ui.retrofit.queryMap.QueryMapFragment"
+        android:label="fragment_query_map"
+        tools:layout="@layout/fragment_query_map" >
+        <action
+            android:id="@+id/action_queryMapFragment_to_retrieveDataFragment"
+            app:destination="@id/retrieveDataFragment"
+            app:popUpTo="@id/retrieveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pathParametersFragment"
+        android:name="com.example.webapp.ui.retrofit.pathParameters.PathParametersFragment"
+        android:label="Path parameters"
+        tools:layout="@layout/fragment_path_parameters" >
+        <action
+            android:id="@+id/action_pathParametersFragment_to_retrieveDataFragment"
+            app:destination="@id/retrieveDataFragment"
+            app:popUpTo="@id/retrieveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bothParametersFragment"
+        android:name="com.example.webapp.ui.retrofit.bothParameters.BothParametersFragment"
+        android:label="Both parameters"
+        tools:layout="@layout/fragment_both_parameters" >
+        <action
+            android:id="@+id/action_bothParametersFragment_to_retrieveDataFragment"
+            app:destination="@id/retrieveDataFragment"
+            app:popUpTo="@id/retrieveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadImageUsingGlideFragment"
+        android:name="com.example.webapp.ui.retrofit.loadImageUsingGlide.LoadImageUsingGlideFragment"
+        android:label="Load Image Using Glide"
+        tools:layout="@layout/fragment_load_image_using_glide" >
+        <action
+            android:id="@+id/action_loadImageUsingGlideFragment_to_retrieveDataFragment"
+            app:destination="@id/retrieveDataFragment"
+            app:popUpTo="@id/retrieveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CRUDOperationFragment"
+        android:name="com.example.webapp.ui.retrofit.crudOperation.CRUDOperationFragment"
+        android:label="CRUD Operation"
+        tools:layout="@layout/fragment_c_r_u_d_operation" >
+        <action
+            android:id="@+id/action_CRUDOperationFragment_to_retrieveDataFragment"
+            app:destination="@id/retrieveDataFragment"
+            app:popUpTo="@id/retrieveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

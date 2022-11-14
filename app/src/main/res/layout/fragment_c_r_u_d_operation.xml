@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.webapp.ui.retrofit.shared.viewModel.SharedViewModel" />
+
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.retrofit.crudOperation.CRUDOperationFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".ui.retrofit.crudOperation.CRUDOperationFragment">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_NewPosts"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="40dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="New Posts"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_postId"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="30dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="User ID"
+                            android:layout_margin="10dp"></com.google.android.material.textview.MaterialTextView>
+
+                        <Spinner
+                            android:id="@+id/spinner_userId"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txt_Lyt_Title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:hint="Title">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txt_Edt_Title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@={viewModel.title}" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txt_Lyt_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:hint="Body">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txt_Edt_body"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@={viewModel.body}" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCancel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_marginRight="10dp"
+                                android:text="Cancel">
+
+                            </com.google.android.material.button.MaterialButton>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPost"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:text="POST"></com.google.android.material.button.MaterialButton>
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/responsePost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="@={viewModel.responsePost}" >
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_UpdatePosts"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="40dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="Update Posts"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="30dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="ID"
+                            android:layout_margin="10dp"></com.google.android.material.textview.MaterialTextView>
+
+                        <Spinner
+                            android:id="@+id/spinner_IdUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_postId_Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="30dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="Post ID"
+                            android:layout_margin="10dp"></com.google.android.material.textview.MaterialTextView>
+
+                        <Spinner
+                            android:id="@+id/spinner_postId_Update"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txt_Lyt_TitleUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:hint="Title">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txt_Edt_TitleUpdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@={viewModel.title}" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txt_Lyt_bodyUpdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:hint="Body">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txt_Edt_bodyUpdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@={viewModel.body}" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCancelUpdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_marginRight="10dp"
+                                android:text="Cancel">
+
+                            </com.google.android.material.button.MaterialButton>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPUT"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:text="PUT">
+
+                            </com.google.android.material.button.MaterialButton>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPATCH"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="PATCH">
+
+                            </com.google.android.material.button.MaterialButton>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_DeletePosts"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="40dp"
+                            android:autoSizeTextType="uniform"
+                            android:text="Delete Posts"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCancelDelete"
+                                style="?attr/materialButtonOutlinedStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:text="Cancel">
+
+                            </com.google.android.material.button.MaterialButton>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDelete"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:text="Delete">
+
+                            </com.google.android.material.button.MaterialButton>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </FrameLayout>
+</layout>
